@@ -5,7 +5,7 @@
   line-height: 1.25;
   color: #003058;
   background-color: #ffffff;
-  max-width: 1200px;
+  max-width: 990px;
   margin: auto;
   container-type: inline-size;
   container-name: es-rc-content;
@@ -182,23 +182,21 @@
 }
 #es-rc #es-rc-content .es-features {
   display: flex;
-  align-items: center;
-  background-color: #0073ce;
+  flex-direction: column-reverse;
   color: #ffffff;
 }
 #es-rc #es-rc-content .es-features__wrapper {
+  margin: auto;
   display: flex;
   flex-direction: column;
-  padding-left: 60px;
+  background-color: #0073ce;
+  padding: 32px;
 }
 #es-rc #es-rc-content .es-features__bg {
-  padding: 45px 50px 0 100px;
-  width: 64%;
-  background: linear-gradient(64deg, #0073ce 37%, #fff 37%);
-}
-#es-rc #es-rc-content .es-features__title {
-  text-align: left;
-  margin-top: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 45px 25px 0 25px;
 }
 #es-rc #es-rc-content .es-features__subtitle {
   font-size: 17.92px;
@@ -218,6 +216,9 @@
   height: 16px;
   margin: 0;
 }
+#es-rc #es-rc-content .es-features__title {
+  font-size: 25px;
+}
 #es-rc #es-rc-content .es-features__badgeCtn {
   display: flex;
   align-items: center;
@@ -236,8 +237,9 @@
   font-size: 16px;
 }
 #es-rc #es-rc-content .es-features__badge__text--bold {
-  font-size: 55px;
-  line-height: 55px;
+  text-align: center;
+  font-size: 25px;
+  line-height: 25px;
   font-weight: 700;
 }
 #es-rc #es-rc-content .es-features__text {
@@ -253,6 +255,9 @@
   }
 }
 @container es-rc-content (min-width: 440px) {
+  #es-rc #es-rc-content .es-features__title {
+    text-align: center;
+  }
   #es-rc #es-rc-content .es-features__hand__container {
     position: relative;
     margin-block: 24px;
@@ -263,11 +268,28 @@
     top: 0;
     right: 0;
   }
+  #es-rc #es-rc-content .es-features__bg {
+    width: 100%;
+    padding: 0 50px;
+  }
+  #es-rc #es-rc-content .es-features__badge__text--bold {
+    line-height: 32px;
+    font-size: 32px;
+    text-align: center;
+  }
 }
 @container es-rc-content (min-width: 576px) {
   #es-rc #es-rc-content .es-features {
-    position: relative;
-    z-index: 1;
+    flex-direction: row;
+    background: linear-gradient(64deg, #0073ce 66%, #fff 37%);
+  }
+  #es-rc #es-rc-content .es-features__title {
+    text-align: left;
+    margin-top: 0;
+  }
+  #es-rc #es-rc-content .es-features__wrapper {
+    background-color: transparent;
+    padding-left: 60px;
   }
   #es-rc #es-rc-content .es-features__hand__container {
     position: static;
@@ -275,6 +297,13 @@
   }
   #es-rc #es-rc-content .es-features__hand__image {
     display: none;
+  }
+  #es-rc #es-rc-content .es-features__bg {
+    width: 64%;
+    padding: 0;
+  }
+  #es-rc #es-rc-content .es-features__badge__text--bold {
+    text-align: left;
   }
 }
 @container es-rc-content (min-width: 768px) {
@@ -394,6 +423,7 @@
   flex-direction: column;
   align-items: center;
   gap: 24px;
+  margin-bottom: 50px;
 }
 #es-rc #es-rc-content .es-benefits__title {
   font-size: 24px;
@@ -449,18 +479,14 @@
 }
 #es-rc #es-rc-content .es-formula-use {
   display: flex;
-}
-#es-rc #es-rc-content .es-formula-use > * {
-  flex: 1;
-}
-#es-rc #es-rc-content .es-formula-use__image {
-  background: linear-gradient(-118deg, #0073ce 36%, #fff 33%);
+  flex-direction: column;
+  background: #fff;
 }
 #es-rc #es-rc-content .es-formula-use__name {
-  font-size: 30px;
+  font-size: 25px;
 }
 #es-rc #es-rc-content .es-formula-use__text {
-  font-size: 25px;
+  font-size: 20px;
 }
 #es-rc #es-rc-content .es-formula-use__text-wrapper {
   width: 90%;
@@ -477,8 +503,29 @@
 #es-rc #es-rc-content .es-formula-use__name {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 30px;
   margin-bottom: 24px;
+}
+@container es-rc-content (min-width: 440px) {
+  #es-rc #es-rc-content .es-formula-use__image {
+    width: 100%;
+  }
+  #es-rc #es-rc-content .es-formula-use__name {
+    text-align: center;
+  }
+  #es-rc #es-rc-content .es-formula-use__content {
+    width: 100%;
+    background-color: #0073ce;
+  }
+}
+@container es-rc-content (min-width: 576px) {
+  #es-rc #es-rc-content .es-formula-use {
+    flex-direction: row;
+    background: linear-gradient(-118deg, #0073ce 67%, #fff 33%);
+  }
+  #es-rc #es-rc-content .es-formula-use__name {
+    text-align: left;
+  }
 }
 #es-rc #es-rc-content .es-video__iframe {
   width: 100%;
