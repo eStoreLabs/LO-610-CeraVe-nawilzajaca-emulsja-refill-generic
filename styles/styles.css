@@ -5,17 +5,13 @@
   line-height: 1.25;
   color: #003058;
   background-color: #ffffff;
-  max-width: 990px;
+  max-width: 1200px;
   margin: auto;
   container-type: inline-size;
   container-name: es-rc-content;
   display: flex;
   flex-direction: column;
   gap: 24px;
-}
-#es-rc #es-rc-content ::-moz-selection {
-  background-color: #46d7ac;
-  color: #003058;
 }
 #es-rc #es-rc-content ::selection {
   background-color: #46d7ac;
@@ -185,13 +181,20 @@
   }
 }
 #es-rc #es-rc-content .es-features {
+  display: flex;
+  align-items: center;
   background-color: #0073ce;
   color: #ffffff;
-  padding: 24px;
 }
 #es-rc #es-rc-content .es-features__wrapper {
   display: flex;
   flex-direction: column;
+  padding-left: 60px;
+}
+#es-rc #es-rc-content .es-features__bg {
+  padding: 45px 50px 0 100px;
+  width: 64%;
+  background: linear-gradient(64deg, #0073ce 37%, #fff 37%);
 }
 #es-rc #es-rc-content .es-features__title {
   text-align: left;
@@ -207,6 +210,7 @@
 #es-rc #es-rc-content .es-features__points__item {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   gap: 8px;
 }
 #es-rc #es-rc-content .es-features__points__icon {
@@ -227,10 +231,13 @@
   max-width: 100px;
 }
 #es-rc #es-rc-content .es-features__badge__text {
+  margin-top: 58px;
   text-transform: uppercase;
   font-size: 16px;
 }
 #es-rc #es-rc-content .es-features__badge__text--bold {
+  font-size: 55px;
+  line-height: 55px;
   font-weight: 700;
 }
 #es-rc #es-rc-content .es-features__text {
@@ -239,9 +246,6 @@
 }
 #es-rc #es-rc-content .es-features__hand__container {
   margin-right: -24px;
-}
-#es-rc #es-rc-content .es-features__bg {
-  display: none;
 }
 @container es-rc-content (min-width: 360px) {
   #es-rc #es-rc-content .es-features__badge__text {
@@ -272,39 +276,8 @@
   #es-rc #es-rc-content .es-features__hand__image {
     display: none;
   }
-  #es-rc #es-rc-content .es-features__bg {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    z-index: -1;
-  }
-  #es-rc #es-rc-content .es-features__bg__image {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  #es-rc #es-rc-content .es-features__wrapper--top {
-    width: 50%;
-  }
-  #es-rc #es-rc-content .es-features__wrapper--bottom {
-    width: 75%;
-  }
 }
 @container es-rc-content (min-width: 768px) {
-  #es-rc #es-rc-content .es-features {
-    padding: 40px 32px;
-  }
-  #es-rc #es-rc-content .es-features__bg {
-    width: 100%;
-    overflow: hidden;
-  }
-  #es-rc #es-rc-content .es-features__bg__image {
-    min-height: -moz-max-content;
-    min-height: max-content;
-  }
   #es-rc #es-rc-content .es-features__title {
     font-size: 32px;
   }
@@ -326,7 +299,7 @@
     margin-top: 32px;
   }
   #es-rc #es-rc-content .es-features__shape {
-    padding: 0px 0px 0px 24px;
+    padding: 0 0 0 24px;
     max-width: 305px;
   }
   #es-rc #es-rc-content .es-features__shape__text {
@@ -334,15 +307,6 @@
   }
   #es-rc #es-rc-content .es-features__shape__text--number {
     font-size: 48px;
-  }
-  #es-rc #es-rc-content .es-features__wrapper--top {
-    width: 50%;
-    max-width: 440px;
-  }
-  #es-rc #es-rc-content .es-features__wrapper--bottom {
-    width: 70%;
-    max-width: 600px;
-    margin-top: 48px;
   }
 }
 #es-rc #es-rc-content .es-ingredients {
@@ -426,9 +390,9 @@
   z-index: -1;
 }
 #es-rc #es-rc-content .es-benefits__container {
-  padding: 24px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 24px;
 }
 #es-rc #es-rc-content .es-benefits__title {
@@ -463,10 +427,7 @@
     min-height: 400px;
   }
   #es-rc #es-rc-content .es-benefits__image__container {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 66%;
+    width: 61%;
   }
   #es-rc #es-rc-content .es-benefits__image__container::after {
     display: none;
@@ -474,24 +435,35 @@
   #es-rc #es-rc-content .es-benefits__container {
     position: relative;
     z-index: 2;
-    width: 55%;
+    width: 39%;
   }
 }
 @container es-rc-content (min-width: 768px) {
   #es-rc #es-rc-content .es-benefits {
     min-height: 450px;
-    padding: 32px;
-  }
-  #es-rc #es-rc-content .es-benefits__image__container {
-    width: 55%;
   }
   #es-rc #es-rc-content .es-benefits__list {
     width: 90%;
     max-width: 350px;
   }
 }
+#es-rc #es-rc-content .es-formula-use {
+  display: flex;
+}
+#es-rc #es-rc-content .es-formula-use > * {
+  flex: 1;
+}
 #es-rc #es-rc-content .es-formula-use__image {
-  background-color: #0073ce;
+  background: linear-gradient(-118deg, #0073ce 36%, #fff 33%);
+}
+#es-rc #es-rc-content .es-formula-use__name {
+  font-size: 30px;
+}
+#es-rc #es-rc-content .es-formula-use__text {
+  font-size: 25px;
+}
+#es-rc #es-rc-content .es-formula-use__text-wrapper {
+  width: 90%;
 }
 #es-rc #es-rc-content .es-formula-use__content {
   background-color: #0073ce;
@@ -499,6 +471,7 @@
   padding: 24px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 32px;
 }
 #es-rc #es-rc-content .es-formula-use__name {
@@ -506,33 +479,6 @@
   font-weight: 700;
   font-size: 24px;
   margin-bottom: 24px;
-}
-@container es-rc-content (min-width: 576px) {
-  #es-rc #es-rc-content .es-formula-use {
-    display: flex;
-    align-items: center;
-    background-color: #0073ce;
-    position: relative;
-  }
-  #es-rc #es-rc-content .es-formula-use__image {
-    width: 54%;
-    min-height: 284px;
-    margin-left: 0;
-  }
-  #es-rc #es-rc-content .es-formula-use__content {
-    margin-left: -30px;
-    background-color: transparent;
-    width: 46%;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
-@container es-rc-content (min-width: 768px) {
-  #es-rc #es-rc-content .es-formula-use__image {
-    width: 50%;
-  }
 }
 #es-rc #es-rc-content .es-video__iframe {
   width: 100%;
@@ -617,7 +563,6 @@
     text-align: left;
   }
   #es-rc #es-rc-content .es-packaging__title--highlight {
-    min-width: -moz-max-content;
     min-width: max-content;
   }
 }
@@ -731,4 +676,6 @@
 #es-rc #es-rc-content .es-disclaimer {
   font-size: 11px;
   margin-block: 40px;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
