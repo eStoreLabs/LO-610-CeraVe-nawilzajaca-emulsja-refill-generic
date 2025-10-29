@@ -148,43 +148,32 @@ $transition: all 0.3s ease-in-out;
         }
       }
     }
-    @container es-rc-content (min-width: 576px) {
+    @container es-rc-content (min-width: 632px) {
+      display: flex;
+      position: relative;
+      background-color: $color-accent;
       &__right {
-        background-color: $color-accent;
+        width: 83%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: unset;
         background-size: 100% 100%;
         background-position: center;
         padding: $px-XXL;
         &__textCtn {
           padding: 0;
           max-width: 380px;
-          margin: auto;
+          margin-left: 16%;
         }
         &__wrapper {
           display: flex;
           align-items: center;
           gap: $px-M;
-        }
-      }
-    }
-    @container es-rc-content (min-width: 589px) {
-      display: flex;
-      position: relative;
-      background-color: $color-accent;
-      &__left {
-        width: 46%;
-      }
-      &__right {
-        width: 69%;
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 100%;
-        background-color: unset;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        &__textCtn {
-          margin-left: 16%;
         }
         &__title {
           font-size: 30px;
@@ -196,13 +185,15 @@ $transition: all 0.3s ease-in-out;
           padding: 0;
         }
       }
+      &__left {
+        width: 52%;
+      }
     }
-    @container es-rc-content (min-width: 768px) {
+    @container es-rc-content (min-width: 780px) {
       &__right {
+        width: 76%;
         &__textCtn {
           max-width: 420px;
-          margin-right: auto;
-          margin-left: 15%;
         }
         &__title {
           font-size: $fs-header-md;
@@ -214,11 +205,9 @@ $transition: all 0.3s ease-in-out;
         }
       }
     }
-    @container es-rc-content (min-width: 880px) {
+    @container es-rc-content (min-width: 1000px) {
       &__right {
-        &__textCtn {
-          margin-left: 28%;
-        }
+        width: 69%;
       }
     }
   }
@@ -337,7 +326,7 @@ $transition: all 0.3s ease-in-out;
         font-size: 28px;
       }
       &__points__text {
-          font-size: 25px;
+        font-size: 25px;
       }
       &__wrapper {
         width: 81%;
@@ -367,16 +356,15 @@ $transition: all 0.3s ease-in-out;
 
   .es-ingredients {
     z-index: 1;
-
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 
     &__bubbles {
       position: absolute;
       top: 10px;
       left: 0;
-      width: 300px;
+      width: 390px;
       z-index: -1;
     }
 
@@ -392,7 +380,7 @@ $transition: all 0.3s ease-in-out;
       flex-wrap: wrap;
       align-content: center;
       justify-content: center;
-      gap: $px-L;
+      gap: 80px;
       &__item {
         display: flex;
         flex-direction: column;
